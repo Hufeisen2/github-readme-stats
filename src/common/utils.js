@@ -4,6 +4,8 @@ import toEmoji from "emoji-name-map";
 import wrap from "word-wrap";
 import { themes } from "../../themes/index.js";
 
+const OWNER_AFFILIATIONS = ["OWNER", "COLLABORATOR", "ORGANIZATION_MEMBER"];
+
 const TRY_AGAIN_LATER = "Please try again later";
 
 const SECONDARY_ERROR_MESSAGES = {
@@ -469,8 +471,6 @@ const CONSTANTS = {
   CARD_CACHE_SECONDS: SIX_HOURS,
   ERROR_CACHE_SECONDS: TEN_MINUTES,
 };
-
-const OWNER_AFFILIATIONS = ["OWNER", "COLLABORATOR", "ORGANIZATION_MEMBER"];
 
 /**
  * Missing query parameter class.
