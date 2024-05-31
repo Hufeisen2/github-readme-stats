@@ -120,7 +120,7 @@ const statsFetcher = async ({
   includeMergedPullRequests,
   includeDiscussions,
   includeDiscussionsAnswers,
-  ownerAffiliations
+  ownerAffiliations,
 }) => {
   let stats;
   let hasNextPage = true;
@@ -133,7 +133,7 @@ const statsFetcher = async ({
       includeMergedPullRequests,
       includeDiscussions,
       includeDiscussionsAnswers,
-      ownerAffiliations: ownerAffiliations,
+      ownerAffiliations,
     };
     let res = await retryer(fetcher, variables);
     if (res.data.errors) {
@@ -258,7 +258,7 @@ const fetchStats = async (
     includeMergedPullRequests: include_merged_pull_requests,
     includeDiscussions: include_discussions,
     includeDiscussionsAnswers: include_discussions_answers,
-    ownerAffiliations: ownerAffiliations
+    ownerAffiliations,
   });
 
   // Catch GraphQL errors.
